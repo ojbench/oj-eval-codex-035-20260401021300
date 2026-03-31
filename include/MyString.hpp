@@ -267,6 +267,7 @@ public:
         const char& operator*() const { return *ptr_; }
         bool operator==(const const_iterator& other) const { return ptr_==other.ptr_; }
         bool operator!=(const const_iterator& other) const { return ptr_!=other.ptr_; }
+        friend class iterator;
         friend class MyString;
     };
 
@@ -278,4 +279,3 @@ public:
 };
 
 #endif // SIMPLE_STRING_SIMPLESTRING_HPP
-
