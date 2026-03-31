@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 #include "MyString.hpp"
 
 int main() {
@@ -10,14 +11,7 @@ int main() {
 
     MyString s; // start empty
     std::string cmd;
-    if (!(std::cin >> cmd)) {
-        // Self-check
-        MyString a("hello"), b(" world"), c;
-        c = a + b;
-        std::cout << c.c_str() << "\n";
-        std::cout << c.size() << " " << c.capacity() << "\n";
-        return 0;
-    }
+    if (!(std::cin >> cmd)) return 0;
     do {
         if (cmd == "set") {
             std::string x; std::cin >> x; s = MyString(x.c_str());
@@ -39,4 +33,3 @@ int main() {
     } while (std::cin >> cmd);
     return 0;
 }
-
